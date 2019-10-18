@@ -1,4 +1,4 @@
-package com.xunyuan.xinyu.phone;
+package com.xunyuan.xinyu.floatwindow.phone;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.text.TextUtils;
 
-import com.xunyuan.xinyu.perssion.SetPermission;
+import com.xunyuan.xinyu.floatwindow.perssion.SetPermission;
 
 /**
  * Description:

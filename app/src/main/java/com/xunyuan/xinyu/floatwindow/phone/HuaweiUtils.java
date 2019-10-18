@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2016 Facishare Technology Co., Ltd. All Rights Reserved.
  */
-package com.xunyuan.xinyu.phone;
+package com.xunyuan.xinyu.floatwindow.phone;
 
 import android.app.AppOpsManager;
 import android.content.ActivityNotFoundException;
@@ -14,7 +14,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.xunyuan.xinyu.perssion.SetPermission;
+
+import com.xunyuan.xinyu.floatwindow.perssion.SetPermission;
 
 import java.lang.reflect.Method;
 

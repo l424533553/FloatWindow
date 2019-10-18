@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2016 Facishare Technology Co., Ltd. All Rights Reserved.
  */
-package com.xunyuan.xinyu.view;
+package com.xunyuan.xinyu.floatwindow.view;
 
 import android.content.Context;
 import android.graphics.PixelFormat;
@@ -9,32 +9,77 @@ import android.graphics.Point;
 import android.os.Build;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.view.WindowManager;
 
 /**
  * Description:
  */
-
 public class FloatWindowManager {
     private static final String TAG = "FloatWindowManager";
-
-    private static volatile FloatWindowManager instance;
-
+    private static  FloatWindowManager instance;
     private boolean isWindowDismiss = true;
     private WindowManager windowManager = null;
     private WindowManager.LayoutParams mParams = null;
     private FloatWindowView floatView = null;
+    private Context mContext;
 
 
-    public static FloatWindowManager getInstance() {
+    public static FloatWindowManager getInstance(Context context) {
         if (instance == null) {
             synchronized (FloatWindowManager.class) {
                 if (instance == null) {
-                    instance = new FloatWindowManager();
+                    instance = new FloatWindowManager(context);
                 }
             }
         }
         return instance;
+    }
+
+
+    private FloatWindowManager(Context context) {
+        //获得WindowManager对象
+        mContext = context;
+        windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+    }
+
+    /**
+     * 添加悬浮窗
+     */
+    protected boolean addView(View view, WindowManager.LayoutParams params) {
+        try {
+            windowManager.addView(view, params);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    /**
+     * 移除悬浮窗
+     */
+    protected boolean removeView(View view) {
+        try {
+            windowManager.removeView(view);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    /**
+     * 更新悬浮窗参数
+     */
+    protected boolean updateView(View view, WindowManager.LayoutParams params) {
+        try {
+            windowManager.updateViewLayout(view, params);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
 

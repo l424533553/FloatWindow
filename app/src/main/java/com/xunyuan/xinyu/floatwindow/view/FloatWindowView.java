@@ -1,4 +1,4 @@
-package com.xunyuan.xinyu.view;
+package com.xunyuan.xinyu.floatwindow.view;
 
 import android.content.Context;
 import android.graphics.Point;
@@ -19,6 +19,7 @@ import com.xunyuan.xinyu.R;
  * 可以悬浮在其他应用上的控件
  */
 public class FloatWindowView extends FrameLayout {
+    
     private static final String TAG = "AVCallFloatView";
 
     /**

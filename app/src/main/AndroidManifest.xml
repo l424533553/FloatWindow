@@ -1,9 +1,8 @@
-<!--
-  ~ Copyright (C) 2016 Facishare Technology Co., Ltd. All Rights Reserved.
-  -->
-<manifest xmlns:tools="http://schemas.android.com/tools"
-    package="com.xunyuan.xinyu"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xunyuan.xinyu">
+
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
@@ -14,15 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
-        <activity android:name="com.xunyuan.xinyu.FloatWindowActivity"
-                  android:screenOrientation="portrait">
-            <intent-filter >
+        <activity android:name=".floatwindow.WindowManagerActivity" />
+        <activity
+            android:name=".floatwindow.FloatWindowActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <service
+            android:name=".floatwindow.MyService"
+            android:enabled="true" />
     </application>
 
 </manifest>

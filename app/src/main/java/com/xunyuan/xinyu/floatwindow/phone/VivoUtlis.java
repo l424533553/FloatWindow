@@ -1,10 +1,11 @@
-package com.xunyuan.xinyu.phone;
+package com.xunyuan.xinyu.floatwindow.phone;
 
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
 
-import com.xunyuan.xinyu.perssion.SetPermission;
+import com.xunyuan.xinyu.floatwindow.perssion.SetPermission;
+
 
 /**
  * 作者：罗发新

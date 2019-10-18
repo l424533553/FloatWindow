@@ -1,4 +1,4 @@
-package com.xunyuan.xinyu.perssion;
+package com.xunyuan.xinyu.floatwindow.perssion;
 
 import android.annotation.SuppressLint;
 import android.app.AppOpsManager;
@@ -128,6 +128,5 @@ public class SetPermission {
         }
         return false;
     }
-
 
 }

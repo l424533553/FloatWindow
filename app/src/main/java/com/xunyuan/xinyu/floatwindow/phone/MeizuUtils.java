@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2016 Facishare Technology Co., Ltd. All Rights Reserved.
  */
-package com.xunyuan.xinyu.phone;
+package com.xunyuan.xinyu.floatwindow.phone;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +9,8 @@ import android.net.Uri;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.xunyuan.xinyu.perssion.SetPermission;
+
+import com.xunyuan.xinyu.floatwindow.perssion.SetPermission;
 
 import java.lang.reflect.Field;
 

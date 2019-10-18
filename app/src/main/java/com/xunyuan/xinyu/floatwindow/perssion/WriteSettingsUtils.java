@@ -1,4 +1,4 @@
-package com.xunyuan.xinyu.perssion;
+package com.xunyuan.xinyu.floatwindow.perssion;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,7 +14,6 @@ import android.support.annotation.RequiresApi;
  * 说明：
  */
 public class WriteSettingsUtils {
-
     private static final int OP_WRITE_SETTINGS = 23;
 
     public static void manageWriteSettings(Context context) {
